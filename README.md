@@ -24,9 +24,9 @@
 
 <br/>
 
-# 🧠 RAY AI Assistant
+# 🧠 graphragUI
 
-RAY (Research Analysis Yielder) is a cutting-edge tool that integrates AI capabilities into your data analysis process. It leverages both Graph RAG and traditional RAG techniques to offer enhanced retrieval and generation capabilities. RAY provides global and local search modes, file management, and indexing capabilities, all through a Streamlit-based user interface.
+graphragUI (Research Analysis Yielder) is a cutting-edge tool that integrates AI capabilities into your data analysis process. It leverages both Graph RAG and traditional RAG techniques to offer enhanced retrieval and generation capabilities. graphragUI provides global and local search modes, file management, and indexing capabilities, all through a Streamlit-based user interface.
 
 ## 🌟 Features
 
@@ -41,7 +41,7 @@ RAY (Research Analysis Yielder) is a cutting-edge tool that integrates AI capabi
 
 ### Graph RAG Advantages
 
-RAY incorporates Graph RAG, a superior technique for retrieval that offers several benefits over traditional RAG:
+graphragUI incorporates Graph RAG, a superior technique for retrieval that offers several benefits over traditional RAG:
 
 - **Enhanced context understanding**: Graph RAG leverages knowledge graphs to capture complex relationships between entities, providing more accurate and contextually rich answers.
 - **Improved handling of structured and unstructured data**: It excels at representing and retrieving heterogeneous and interconnected information.
@@ -77,9 +77,9 @@ RAY incorporates Graph RAG, a superior technique for retrieval that offers sever
 
 6. Open your web browser and navigate to the URL provided by Streamlit (usually http://localhost:8501)
 
-7. Use the sidebar to configure RAY and upload your documents
+7. Use the sidebar to configure graphragUI and upload your documents
 
-8. Ask questions and interact with RAY through the main interface, leveraging both Graph RAG and traditional RAG capabilities for comprehensive information retrieval
+8. Ask questions and interact with graphragUI through the main interface, leveraging both Graph RAG and traditional RAG capabilities for comprehensive information retrieval
 
 ## 🗂️ Project Structure
 

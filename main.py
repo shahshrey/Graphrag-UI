@@ -8,12 +8,12 @@ from src.utils.utils import initialize_directories, save_results_to_csv
 import os
 import logging
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename='ray.log')
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', filename='graphragui.log')
 logger = logging.getLogger(__name__)
 
 async def process_query(query, search_engine, mode):
     logger.info(f"Processing query: {query} in {mode} mode")
-    with st.spinner("RAY is processing your query..."):
+    with st.spinner("graphragUI is processing your query..."):
         search_query = f"{query} Please format your answer in markdown."
         response = await search_engine.asearch(search_query)
     
@@ -25,7 +25,7 @@ async def process_query(query, search_engine, mode):
     }
 
 def main():
-    logger.info("Starting RAY application")
+    logger.info("Starting graphragUI application")
     setup_page_config()
     apply_custom_css()
     
@@ -37,7 +37,7 @@ def main():
     indexing_status = check_indexing_status()
     
     if not files_exist:
-        st.warning("No files in RAY's knowledge base. Please add files.")
+        st.warning("No files in graphragUI's knowledge base. Please add files.")
         uploaded_file = st.file_uploader("Upload New File", type=["txt"])
         if uploaded_file is not None:
             logger.info(f"File uploaded: {uploaded_file.name}")
@@ -63,13 +63,13 @@ def main():
     except Exception as e:
         logger.error(f"Error setting up search engines: {str(e)}", exc_info=True)
         st.error(f"Error setting up search engines: {str(e)}")
-        st.error("This might be due to missing or corrupted index files. Please try to integrate the knowledge into RAY's brain.")
-        if st.button("Integrate the knowledge into RAY's Brain"):
+        st.error("This might be due to missing or corrupted index files. Please try to integrate the knowledge into graphragUI's brain.")
+        if st.button("Integrate the knowledge into graphragUI's Brain"):
             logger.info("Performing indexing after setup error")
             perform_indexing()
         return
 
-    st.title("Chat with RAY")
+    st.title("Chat with graphragUI")
     
     # Display user message input in the main area
     user_message = st.text_input("Your message:", key="user_input")
@@ -88,7 +88,7 @@ def main():
         # Save results to CSV
         save_results_to_csv(result, user_message, mode)
 
-    logger.info("RAY application finished processing")
+    logger.info("graphragUI application finished processing")
 
 if __name__ == "__main__":
     main()

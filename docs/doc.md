@@ -1,8 +1,8 @@
-# RAY AI Assistant - Detailed Documentation
+# graphragUI - Detailed Documentation
 
 ## 1. Introduction
 
-RAY (Research Analysis Yielder) is an advanced AI assistant designed to help users interact with complex datasets and perform sophisticated searches using various AI-powered techniques. It leverages OpenAI's language models and provides a user-friendly interface through Streamlit.
+graphragUI is an advanced AI assistant designed to help users interact with complex datasets and perform sophisticated searches using various AI-powered techniques. It leverages OpenAI's language models and provides a user-friendly interface through Streamlit.
 
 ## 2. Features
 
@@ -32,8 +32,8 @@ RAY (Research Analysis Yielder) is an advanced AI assistant designed to help use
 
 2. Create a Virtual Environment (optional but recommended):
    ```
-   python -m venv ray_env
-   source ray_env/bin/activate  # On Windows, use: ray_env\Scripts\activate
+   python -m venv graphragui_env
+   source graphragui_env/bin/activate  # On Windows, use: graphragui_env\Scripts\activate
    ```
 
 3. Install Dependencies:
@@ -91,43 +91,43 @@ The application can be configured through the `src/config/config.py` file and th
 
 ```9:34:src/ui/ui.py
 def setup_sidebar():
-    st.sidebar.title("RAY Configuration")
+    st.sidebar.title("graphragUI Configuration")
     tabs = st.sidebar.tabs(["Input", "Model", "Search", "Advanced"])
     with tabs[0]:  # Input tab
-        user_input = st.text_area("Ask RAY a question (or multiple questions, one per line):")
+        user_input = st.text_area("Ask graphragUI a question (or multiple questions, one per line):")
         mode = st.selectbox("Select Search Mode", ["global", "local", "vanilla"], help="Global: Broad knowledge. Local: Specific context. Vanilla: Basic RAG.")
-        st.subheader("Manage RAY's Knowledge")
+        st.subheader("Manage graphragUI's Knowledge")
         
         manage_input_files()
     
     with tabs[1]:  # Model tab
         config = {}
-        config["openai_model"] = st.selectbox("Select RAY's Language Model", ["gpt-4o", "gpt-4o-mini"], index=1)
-        config["api_key"] = st.text_input("OpenAI API Key for RAY", value=API_KEY, type="password")
-        config["temperature"] = st.slider("RAY's Creativity (Temperature)", min_value=0.0, max_value=1.0, value=0.0, step=0.1)
+        config["openai_model"] = st.selectbox("Select graphragUI's Language Model", ["gpt-4o", "gpt-4o-mini"], index=1)
+        config["api_key"] = st.text_input("OpenAI API Key for graphragUI", value=API_KEY, type="password")
+        config["temperature"] = st.slider("graphragUI's Creativity (Temperature)", min_value=0.0, max_value=1.0, value=0.0, step=0.1)
     
     with tabs[2]:  # Search tab
-        config["allow_general_knowledge"] = st.checkbox("Allow RAY to Use General Knowledge", value=False)
-        config["use_community_summary"] = st.checkbox("Use Community Summary in RAY's Responses", value=False)
-        config["include_community_rank"] = st.checkbox("Include Community Rank in RAY's Analysis", value=True)
-        config["community_level"] = st.slider("RAY's Community Analysis Depth", min_value=0, max_value=5, value=2, step=1)
+        config["allow_general_knowledge"] = st.checkbox("Allow graphragUI to Use General Knowledge", value=False)
+        config["use_community_summary"] = st.checkbox("Use Community Summary in graphragUI's Responses", value=False)
+        config["include_community_rank"] = st.checkbox("Include Community Rank in graphragUI's Analysis", value=True)
+        config["community_level"] = st.slider("graphragUI's Community Analysis Depth", min_value=0, max_value=5, value=2, step=1)
     
     with tabs[3]:  # Advanced tab
-        config["artifacts_dir"] = st.text_input("RAY's Knowledge Base Directory", value=ARTIFACTS_DIR)
+        config["artifacts_dir"] = st.text_input("graphragUI's Knowledge Base Directory", value=ARTIFACTS_DIR)
     
     return user_input, mode, config
 ```
 
 
-These options allow users to customize various aspects of RAY's behavior directly from the UI.
+These options allow users to customize various aspects of graphragUI's behavior directly from the UI.
 
 ## 6. Usage Guide
 
-### 6.1 Adding Documents to RAY's Knowledge Base
+### 6.1 Adding Documents to graphragUI's Knowledge Base
 
 1. Navigate to the "Input" tab in the sidebar.
 2. Use the file uploader to add new documents (supported formats: TXT, PDF, DOCX, PPTX, CSV).
-3. Once uploaded, click on "Update RAY's Knowledge Base" to index the new documents.
+3. Once uploaded, click on "Update graphragUI's Knowledge Base" to index the new documents.
 
 ### 6.2 Configuring Search Parameters
 
@@ -166,7 +166,7 @@ These options allow users to customize various aspects of RAY's behavior directl
 
 ### 7.2 Community Analysis
 
-RAY uses a community-based analysis system to rank and weight information. This can be adjusted using the "Community Analysis Depth" slider in the UI.
+graphragUI uses a community-based analysis system to rank and weight information. This can be adjusted using the "Community Analysis Depth" slider in the UI.
 
 ### 7.3 Custom Indexing
 
@@ -175,9 +175,9 @@ For advanced users, custom indexing can be performed by modifying the indexing p
 
 ```15:19:src/indexing/indexing.py
 def perform_indexing():
-    st.info("Updating RAY's knowledge base...")
+    st.info("Updating graphragUI's knowledge base...")
     subprocess.run(["python", "-m", "graphrag.index", "--root", BASE_DIR], check=True)
-    st.success("RAY's knowledge base has been successfully updated!")
+    st.success("graphragUI's knowledge base has been successfully updated!")
     st.experimental_rerun()
 ```
 
@@ -210,7 +210,7 @@ To enable detailed logging for troubleshooting:
 1. Modify `main.py` to include logging configuration:
    ```python
    import logging
-   logging.basicConfig(level=logging.DEBUG, filename='ray_debug.log')
+   logging.basicConfig(level=logging.DEBUG, filename='graphragui_debug.log')
    ```
 
 2. Add logging statements in relevant parts of the code, e.g.:
@@ -218,11 +218,11 @@ To enable detailed logging for troubleshooting:
    logging.debug(f"Processing query: {query}")
    ```
 
-3. Check the `ray_debug.log` file for detailed information when issues occur.
+3. Check the `graphragui_debug.log` file for detailed information when issues occur.
 
 ## 9. Contributing
 
-Contributions to RAY AI Assistant are welcome. Please follow these steps:
+Contributions to graphragUI are welcome. Please follow these steps:
 
 1. Fork the repository.
 2. Create a new branch for your feature or bug fix.
@@ -232,7 +232,7 @@ Contributions to RAY AI Assistant are welcome. Please follow these steps:
 
 ## 10. License
 
-RAY AI Assistant is licensed under the MIT License. This means you are free to use, modify, and distribute the software, provided that you include the original copyright notice and this permission notice in any copies or substantial portions of the software.
+graphragUI is licensed under the MIT License. This means you are free to use, modify, and distribute the software, provided that you include the original copyright notice and this permission notice in any copies or substantial portions of the software.
 
 The full text of the MIT License is as follows.
 
@@ -240,4 +240,4 @@ The full text of the MIT License is as follows.
 
 For questions, issues, or support, please [provide appropriate contact information or links to support resources].
 
-This detailed documentation should provide a comprehensive guide to setting up, configuring, and using the RAY AI Assistant. It covers the main features, installation process, usage instructions, and troubleshooting tips, making it easier for users to get started and make the most of the application.
+This detailed documentation should provide a comprehensive guide to setting up, configuring, and using the graphragUI. It covers the main features, installation process, usage instructions, and troubleshooting tips, making it easier for users to get started and make the most of the application.
