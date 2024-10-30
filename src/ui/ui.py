@@ -4,13 +4,13 @@ from ..config.config import ARTIFACTS_DIR, API_KEY
 
 def setup_page_config():
     st.set_page_config(
-        page_title="RAY - Your Virtual AI Assistant",
+        page_title="graphragUI - Your Virtual AI Assistant",
         layout="wide",
         initial_sidebar_state="expanded",
         menu_items={
             'Get Help': 'https://github.com/shahshrey/ray-ai-assistant',
             'Report a bug': "https://github.com/shahshrey/ray-ai-assistant/issues",
-            'About': "RAY is an advanced AI assistant designed to help users interact with complex datasets."
+            'About': "graphragUI is an advanced AI assistant designed to help users interact with complex datasets."
         }
     )
 
@@ -109,7 +109,7 @@ def apply_custom_css():
     """, unsafe_allow_html=True)
 
 def setup_sidebar():
-    st.sidebar.title("RAY Configuration")
+    st.sidebar.title("graphragUI Configuration")
     
     tabs = st.sidebar.tabs(["Input", "Model", "Search", "Advanced"])
     
@@ -119,14 +119,14 @@ def setup_sidebar():
             ["vanilla", "global", "local" ],
             help="Global: Broad knowledge. Local: Specific context. Vanilla: Basic RAG."
         )
-        st.subheader("Manage RAY's Knowledge")
+        st.subheader("Manage graphragUI's Knowledge")
         manage_input_files()
     
     with tabs[1]:  # Model tab
         config = {}
-        config["openai_model"] = st.selectbox("Select RAY's Language Model", ["gpt-4o", "gpt-4o-mini"], index=1)
-        config["api_key"] = st.text_input("OpenAI API Key for RAY", value=API_KEY, type="password")
-        config["temperature"] = st.slider("RAY's Creativity", min_value=0.0, max_value=1.0, value=0.0, step=0.1)
+        config["openai_model"] = st.selectbox("Select graphragUI's Language Model", ["gpt-4o", "gpt-4o-mini"], index=1)
+        config["api_key"] = st.text_input("OpenAI API Key for graphragUI", value=API_KEY, type="password")
+        config["temperature"] = st.slider("graphragUI's Creativity", min_value=0.0, max_value=1.0, value=0.0, step=0.1)
     
     with tabs[2]:  # Search tab
         config["allow_general_knowledge"] = st.checkbox("Allow General Knowledge", value=False)
