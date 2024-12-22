@@ -24,7 +24,7 @@
 
 <br/>
 
-# 🧠 RAY AI Assistant
+# 🧠 GRAPHRAG UI Assistant
 
 RAY (Research Analysis Yielder) is a cutting-edge tool that integrates AI capabilities into your data analysis process. It leverages both Graph RAG and traditional RAG techniques to offer enhanced retrieval and generation capabilities. RAY provides global and local search modes, file management, and indexing capabilities, all through a Streamlit-based user interface.
 
