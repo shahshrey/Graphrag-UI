@@ -1,32 +1,32 @@
 <div align="center">
-  <a href="https://github.com/shahshrey/ray-ai-assistant">
+  <a href="https://github.com/shahshrey/Graphrag-UI">
     <img src="docs/images/logo.png" style="max-width: 500px" width="50%" alt="Logo">
   </a>
 </div>
 
 <div align="center">
-  <em>An advanced AI assistant designed to help users interact with complex datasets and perform sophisticated searches using various AI-powered techniques, including Graph RAG and traditional RAG approaches.</em>
+  <em>Graphrag-UI is designed to help users interact with complex datasets and perform sophisticated rag searches using various AI-powered techniques, including Graph RAG and traditional RAG approaches.</em>
 </div>
 
 <br />
 
 <div align="center">
-  <a href="https://github.com/shahshrey/ray-ai-assistant/commits">
-    <img src="https://img.shields.io/github/commit-activity/m/shahshrey/ray-ai-assistant" alt="git commit activity">
+  <a href="https://github.com/shahshrey/Graphrag-UI/commits">
+    <img src="https://img.shields.io/github/commit-activity/m/shahshrey/Graphrag-UI" alt="git commit activity">
     <img src="https://img.shields.io/badge/License-MIT-yellow.svg?&color=3670A0" alt="License: MIT">
   </a>
 </div>
 <p align="center">
-<a href="https://github.com/shahshrey/ray-ai-assistant">🖇️ Repository</a>
+<a href="https://github.com/shahshrey/Graphrag-UI">🖇️ Repository</a>
 <span>&nbsp;&nbsp;•&nbsp;&nbsp;</span>
-<a href="https://github.com/shahshrey/ray-ai-assistant/blob/master/docs/doc.md">📙 Documentation</a>
+<a href="https://github.com/shahshrey/Graphrag-UI/blob/master/docs/doc.md">📙 Documentation</a>
 </p>
 
 <br/>
 
 # 🧠 GRAPHRAG UI Assistant
 
-RAY (Research Analysis Yielder) is a cutting-edge tool that integrates AI capabilities into your data analysis process. It leverages both Graph RAG and traditional RAG techniques to offer enhanced retrieval and generation capabilities. RAY provides global and local search modes, file management, and indexing capabilities, all through a Streamlit-based user interface.
+Graphrag-UI is a cutting-edge tool that integrates AI capabilities into your rag analysis process. It leverages both Graph RAG and traditional RAG techniques to offer enhanced retrieval and generation capabilities. Graphrag-UI provides global and local search modes, file management, and indexing capabilities, all through a Streamlit-based user interface.
 
 ## 🌟 Features
 
@@ -41,7 +41,7 @@ RAY (Research Analysis Yielder) is a cutting-edge tool that integrates AI capabi
 
 ### Graph RAG Advantages
 
-RAY incorporates Graph RAG, a superior technique for retrieval that offers several benefits over traditional RAG:
+Graphrag-UI incorporates Graph RAG, a superior technique for retrieval that offers several benefits over traditional RAG:
 
 - **Enhanced context understanding**: Graph RAG leverages knowledge graphs to capture complex relationships between entities, providing more accurate and contextually rich answers.
 - **Improved handling of structured and unstructured data**: It excels at representing and retrieving heterogeneous and interconnected information.
@@ -51,8 +51,8 @@ RAY incorporates Graph RAG, a superior technique for retrieval that offers sever
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/shahshrey/ray-ai-assistant.git
-   cd ray_ai_assistant
+   git clone https://github.com/shahshrey/Graphrag-UI.git
+   cd Graphrag-UI
    ```
 
 2. Create a virtual environment and activate it:
@@ -77,9 +77,9 @@ RAY incorporates Graph RAG, a superior technique for retrieval that offers sever
 
 6. Open your web browser and navigate to the URL provided by Streamlit (usually http://localhost:8501)
 
-7. Use the sidebar to configure RAY and upload your documents
+7. Use the sidebar to configure Graphrag-UI and upload your documents
 
-8. Ask questions and interact with RAY through the main interface, leveraging both Graph RAG and traditional RAG capabilities for comprehensive information retrieval
+8. Ask questions and interact with Graphrag-UI through the main interface, leveraging both Graph RAG and traditional RAG capabilities for comprehensive information retrieval
 
 ## 🗂️ Project Structure
 
