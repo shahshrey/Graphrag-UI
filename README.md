@@ -1,6 +1,6 @@
 <div align="center">
   <a href="https://github.com/shahshrey/Graphrag-UI">
-    <img src="docs/images/logo.png" style="max-width: 500px" width="50%" alt="Logo">
+    <img src="docs/logo.png" style="max-width: 500px" width="50%" alt="Logo">
   </a>
 </div>
 
